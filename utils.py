@@ -41,3 +41,10 @@ def inverted_index (clean_df,dic_of_vocab):
           elif word not in dic_of_vocab.keys() : 
               no.append(word)
     return  inverted_index , no       
+
+import pickle 
+
+pickle.dump( inverted_index  , open( "inverted_index_in_PART", "wb"))
+pickle.dump( vocabulary  , open( "vocabulary_in_PART", "wb" ))
+pickle.dump( dic_of_term_id  , open( "dic_of_term_id_in_PART", "wb"))
+pickle.dump( dic_of_vocab  , open( "dic_of_vocab_in_PART", "wb" ))
